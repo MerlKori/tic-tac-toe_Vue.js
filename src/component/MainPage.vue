@@ -195,9 +195,6 @@ export default {
  	 font-size: 55px;
  	 cursor: pointer;
 
-     @media screen and ( max-width: 440px) {
-         height: 80px;
-  }
  }
 
  .cell:first-of-type{

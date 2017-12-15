@@ -58,6 +58,7 @@ export default {
    letter-spacing: .1em;
    @media screen and ( max-width: 440px) {
      font-size: 20px;
+     margin-top: 15px;
   }
 }
 
@@ -65,6 +66,10 @@ export default {
   font-size: 20px;
   letter-spacing: .05em;
   margin: 10px auto;
+
+  @media screen and ( max-width: 440px) {
+    margin: 10px auto 15px;
+  }
 }
 
 .start-page__entry-field{
@@ -93,6 +98,11 @@ export default {
 .btn-start{
    background-color: #034777;
    color: #fff;
+   
+    @media screen and ( max-width: 440px) {
+      margin-top: 25px;
+  }
+
 
    &:hover{
     background-color: #046AB2;

@@ -18,6 +18,7 @@
       <app-result
       v-else-if="state == 'result'"
       :winner="winnerPlayer"
+      :src="srcResult"
       @endGame="onEnd"
       @repeatGame="onRepeat"
       ></app-result>
@@ -33,7 +34,8 @@ export default {
       state: "start",
       player1: " ",
       player2: " ",
-      winnerPlayer: " "
+      winnerPlayer: " ",
+      srcResult: " " 
 
       
     }
@@ -49,6 +51,12 @@ export default {
      onResult(winner){
         this.winnerPlayer = "player " + winner +  " won !!!";
         this.state = "result";
+
+        if ( this.player1 == winner) {
+          this.srcResult = "images/o.jpg"
+        } else{
+            this.srcResult = "images/x.jpg"
+        }
      },
 
      onEnd() {
@@ -60,6 +68,7 @@ export default {
      onDraw() {
         this.state = "result";
         this.winnerPlayer = "Draw";
+        this.srcResult = "images/draw.jpg"
      }
 
   }
@@ -121,7 +130,7 @@ h2,h3{
 
     @media screen and ( max-width: 440px) {
          width: 90%;
-         margin: 10px auto;
+         margin: 25px auto;
    }
   }
 
